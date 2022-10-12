@@ -1,3 +1,5 @@
+//Pure and Impure
+
 class gameConway {
 
 
@@ -26,6 +28,9 @@ class gameConway {
 
 
         //This function create each cells into an array, in every single column and row
+
+       /*  ===================== pure fuction ======================= */
+
         this.gameInitialization = () => { 
             for (let i = 0; i < this.rowsNumber; i++) {
                 this.currentGeneration[i] = []; //Create the row
@@ -37,6 +42,8 @@ class gameConway {
         };
 
         //function to fill with the representative colors of each state of the cells
+
+         /*  ===================== impure fuction ======================= */
         this.fillCanvas = () => {
             //The next 3 double "for" are to block sections of the canvas that don't work well base on the closed topology,
             //it means that the border are treaters as dead cells
@@ -77,6 +84,9 @@ class gameConway {
         };
 
         //function to change the cell that was clicked
+
+        /*  ===================== impure fuction ======================= */
+
         this.clickCell = (x,y) => {
 
             for (let i = 0; i < this.rowsNumber; i++) {
@@ -98,6 +108,9 @@ class gameConway {
         };
 
          //Random function.
+
+         /*  ===================== impure fuction ======================= */
+
          this.gameRandomize = () => {
 
             for (let i = 0; i < this.rowsNumber; i++) {
@@ -110,6 +123,9 @@ class gameConway {
         };
 
         //population count function
+        
+        /*  ===================== impure fuction ======================= */
+
         this.population = () => {
             let population = 0;
             for (let i = 0; i < this.rowsNumber; i++) {
@@ -125,6 +141,9 @@ class gameConway {
 
 
         //This function was needed because the error "Cannot read properties of undefined" was being received.
+         
+        /*  ===================== impure fuction ======================= */
+
         this.cellStatus = (row, col) => {
             
             //A "try catch" is used to catch the error
@@ -139,6 +158,9 @@ class gameConway {
             };
 
         //Function to count the number of living neighbors of each cell
+        
+        /*  ===================== impure fuction ======================= */
+
         this.neighboursNumber = (row, col) => {
             let totalNeighbours = 0;
             //each cell has 8 neighbors
@@ -155,6 +177,10 @@ class gameConway {
         };
 
         //Function to apply the rules of the game regarding the number of living neighbors
+
+        /*  ===================== impure fuction ======================= */
+
+
         this.appliedRules = (row, col) => {
 
             //variable of total living neighbors
@@ -181,7 +207,11 @@ class gameConway {
         };
 
 
-        //This function uses previous functions to update the cell generation.
+        //This function uses previous functions to update the cell generation. 
+    
+        
+        /*  ===================== impure fuction ======================= */
+
         this.updateGeneration = () => {
 
             //The next 3 double "for" are to kill the cells of sections of the canvas that don't work well

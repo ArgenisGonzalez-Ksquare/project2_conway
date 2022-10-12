@@ -99,6 +99,7 @@ start_stop.addEventListener("click", () => {
     else window.clearInterval(intervalId);
 })
 
+/*  ===================== impure fuction ======================= */
 
 //event where the canvas is clicked to enter a configuration.
 canvas.addEventListener('click', function(event) {
@@ -133,6 +134,9 @@ canvas.addEventListener('click', function(event) {
     }
 }, false);
 
+
+/*  ===================== pure fuction ======================= */
+
 clear.addEventListener("click", () => {
 
     //This can only happen if the population is greater than 0.
@@ -149,6 +153,9 @@ clear.addEventListener("click", () => {
 })
 
 //event to enter a random configuration.
+
+/*  ===================== impure fuction ======================= */
+
 random.addEventListener("click", () => {
     //This can only happen if the game has never started.
     if(!isStarted){
@@ -162,6 +169,8 @@ random.addEventListener("click", () => {
     clear.disabled = false;
     
 })
+
+/*  ===================== pure fuction ======================= */
 
 //reset event.
 reset.addEventListener("click", () => {
